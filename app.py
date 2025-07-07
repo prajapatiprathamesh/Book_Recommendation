@@ -106,7 +106,7 @@ if page == "Home":
     """, unsafe_allow_html=True)
 
     st.markdown("<br><br>", unsafe_allow_html=True)
-    # st.image("https://images.unsplash.com/photo-1606112219348-204d7d8b94ee", use_column_width=True)
+    # st.image("https://images.unsplash.com/photo-1606112219348-204d7d8b94ee", use_container_width=True)
 
 # ------------------------- Page: Top 50 Popular Books -------------------------
 elif page == "Top 50 Popular Books":
@@ -126,7 +126,7 @@ elif page == "Top 50 Popular Books":
         for col, (_, row) in zip(cols, row_books.iterrows()):
             with col:
                 st.markdown("<div class='book-card'>", unsafe_allow_html=True)
-                st.image(row['Image-URL-M'], use_column_width=True)
+                st.image(row['Image-URL-M'], use_container_width=True)
                 st.markdown(f"<div class='book-title'>{row['Book-Title']}</div>", unsafe_allow_html=True)
                 st.markdown(f"<div class='book-author'>by {row['Book-Author']}</div>", unsafe_allow_html=True)
                 st.markdown("</div>", unsafe_allow_html=True)
@@ -154,7 +154,7 @@ elif page == "Book Recommendation":
                 for i, row in recommended_books_df.iterrows():
                     with cols[i % num_cols]:
                         st.markdown("<div class='book-card'>", unsafe_allow_html=True)
-                        st.image(row['Image-URL-M'], use_column_width=True)
+                        st.image(row['Image-URL-M'], use_container_width=True)
                         st.markdown(f"<div class='book-title'>{row['Book-Title']}</div>", unsafe_allow_html=True)
                         st.markdown(f"<div class='book-author'>by {row['Book-Author']}</div>", unsafe_allow_html=True)
                         st.markdown("</div>", unsafe_allow_html=True)
